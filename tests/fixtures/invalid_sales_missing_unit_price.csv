@@ -1,0 +1,4 @@
+date,customer,product,quantity
+2026-09-01,ACME,Filter A,3
+2026-09-01,TechPol,Filter B,2
+2026-09-02,ACME,Filter B,1

@@ -1,0 +1,9 @@
+date,customer,product,quantity,unit_price
+2026-09-01,ACME,Filter A,3,120.00
+bad-date,TechPol,Filter B,2,180.00
+2026-09-02,,Filter B,1,180.00
+2026-09-03,ACME,,2,95.50
+2026-09-04,IndustrialPro,Filter C,0,95.50
+2026-09-05,MechaSystems,Filter A,-2,120.00
+2026-09-06,TechPol,Filter C,1.5,95.50
+2026-09-07,ACME,Filter B,2,-180.00

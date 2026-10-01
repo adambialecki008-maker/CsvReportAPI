@@ -1,0 +1,4 @@
+date,customer,product,quantity,unit_price
+2026-09-01,ACME,Filter A,3,120.00
+2026-09-02,TechPol,,2,180.00
+2026-09-03,IndustrialPro,Filter C,1,95.50

@@ -2,19 +2,22 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+*.pyo
 
 .env
 .env.*
 
 .vscode/
+.idea/
 
-dist/
 build/
-
-*.log
+dist/
+release/
+*.spec
 
 reports/
 output/
+*.log
 
 Thumbs.db
 Desktop.ini

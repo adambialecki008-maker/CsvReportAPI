@@ -37,21 +37,11 @@ Source: "assets\csv_report.ico"; DestDir: "{app}"; Flags: ignoreversion
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional shortcuts:"
 
 [Icons]
-Name: "{group}\{#MyAppName}"; \
-    Filename: "{app}\{#MyAppExeName}"; \
-    IconFilename: "{app}\csv_report.ico"; \
-    IconIndex: 0
-
-Name: "{autodesktop}\{#MyAppName}"; \
-    Filename: "{app}\{#MyAppExeName}"; \
-    IconFilename: "{app}\csv_report.ico"; \
-    IconIndex: 0; \
-    Tasks: desktopicon
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\csv_report.ico"; IconIndex: 0
+Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\csv_report.ico"; IconIndex: 0; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; \
-    Description: "Launch {#MyAppName}"; \
-    Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "Launch {#MyAppName}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}"

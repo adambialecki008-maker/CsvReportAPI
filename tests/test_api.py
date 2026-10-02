@@ -32,6 +32,17 @@ def test_reports_returns_422_for_invalid_csv():
     assert response.json()["detail"] != []
 
 
+def test_reports_returns_422_for_malformed_csv():
+    with open("tests/fixtures/malformed.csv", "rb") as file:
+        response = client.post(
+            "/reports",
+            files={"file": ("malformed.csv", file, "text/csv")},
+        )
+
+    assert response.status_code == 422
+    assert response.json()["detail"] == ["Invalid CSV file"]
+
+
 def test_reports_returns_required_headers_from_xlsx():
     with open("tests/fixtures/sample_sales.csv", "rb") as file:
         response = client.post(

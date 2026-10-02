@@ -229,9 +229,15 @@ Binary builds should be published through GitHub Releases rather than committed 
 
 ## Download
 
-Windows builds can be published under:
+The latest Windows installer is available from:
 
-[GitHub Releases](https://github.com/adambialecki008-maker/CsvReportAPI/releases/latest)
+[**Download CSV Report Generator v0.1.0**](https://github.com/adambialecki008-maker/CsvReportAPI/releases/latest)
+
+Current release asset:
+
+```text
+CSVReportGenerator-v0.1.0-Setup.exe
+```
 
 ## Design decisions
 

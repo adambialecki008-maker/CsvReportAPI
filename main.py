@@ -4,9 +4,10 @@ from fastapi.templating import Jinja2Templates
 from csv_file_repository import read_csv_file
 from validation import validate_file
 from excel_report_repository import create_excel_report
+from pathlib import Path
+import sys
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
 
 
 @app.get("/health")
@@ -37,3 +38,15 @@ def home(request: Request):
         request=request,
         name="index.html",
     )
+
+
+def resource_path(relative_path: str) -> Path:
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+        base_path = Path(sys._MEIPASS)
+    else:
+        base_path = Path(__file__).resolve().parent
+
+    return base_path / relative_path
+
+
+templates = Jinja2Templates(directory=str(resource_path("templates")))

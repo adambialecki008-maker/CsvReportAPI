@@ -67,10 +67,16 @@ def validate_date(data):
 
 def validate_file(data):
     errors = []
+
+    column_errors = validate_columns(data)
+
+    if column_errors:
+        return column_errors
+
     errors.extend(validate_date(data))
-    errors.extend(validate_columns(data))
-    errors.extend(validate_quantity(data))
-    errors.extend(validate_unit_price(data))
     errors.extend(validate_customer(data))
     errors.extend(validate_product(data))
+    errors.extend(validate_quantity(data))
+    errors.extend(validate_unit_price(data))
+
     return errors

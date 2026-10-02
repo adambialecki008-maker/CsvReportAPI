@@ -6,7 +6,7 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.styles import Font, PatternFill, Alignment
 
 
-def create_excel_report(data, summary):
+def create_excel_report(data):
     workbook = Workbook()
     output = BytesIO()
     create_sales_sheet(workbook, data)

@@ -73,7 +73,4 @@ def validate_file(data):
     errors.extend(validate_unit_price(data))
     errors.extend(validate_customer(data))
     errors.extend(validate_product(data))
-    if errors == []:
-        return True
-    else:
-        return errors
+    return errors

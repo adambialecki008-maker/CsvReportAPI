@@ -1,5 +1,5 @@
 from validation import *
-from csv_reader import read_csv_file
+from csv_file_repository import read_csv_file
 
 sample_file = "tests/fixtures/sample_sales.csv"
 data = read_csv_file(sample_file)
@@ -53,7 +53,7 @@ def test_validate_product_returns_empty_list_if_all_ok():
 
 
 def test_validate_file_returns_true_if_all_ok():
-    assert validate_file(data) == True
+    assert validate_file(data) == []
 
 
 def test_validate_file_returns_errors_if_something_is_bad():

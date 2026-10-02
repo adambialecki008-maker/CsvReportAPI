@@ -1,5 +1,5 @@
 from summary import *
-from csv_reader import read_csv_file
+from csv_file_repository import read_csv_file
 
 sample_file = "tests/fixtures/sample_sales.csv"
 data = read_csv_file(sample_file)

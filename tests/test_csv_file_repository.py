@@ -1,4 +1,4 @@
-from csv_reader import *
+from csv_file_repository import read_csv_file
 
 sample_file = "tests/fixtures/sample_sales.csv"
 data = read_csv_file(sample_file)
